@@ -21,7 +21,7 @@ Class details and low-level description:
     - t_new: number         = Timestamp of the new error
     - t_prevs: number[]     = timestamp of the last errors
     - lastEmailSent: Object = An object that persists info about the last time when an
-                              the email was sent (flag, timestamp, etc.).
+                              email was sent (flag, timestamp, etc.).
 
   Procedure/Steps after Alarm.notifyError is called with an error:
     1- While t_prevs is not empty, t_new and oldest t_prevs (t_prevs[0]) will be compared.

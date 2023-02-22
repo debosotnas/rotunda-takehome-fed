@@ -1,7 +1,7 @@
-import { ZooError, ERROR_MESSAGES } from "../common/ZooError";
+import { ZooError, ERROR_MESSAGES } from '../common/ZooError';
 
 export default class Animal {
-
+  // ID is used with Zoo class, once the animal is added to a zoo instance
   #id = null;
   #sound = '';
   #name = '';
@@ -11,7 +11,7 @@ export default class Animal {
     this.#name = name;
     this.#id = null;
 
-    if(this.constructor.name === 'Animal') {
+    if (this.constructor.name === 'Animal') {
       throw new ZooError(`${ERROR_MESSAGES.INSTANCE_FROM_ABSTRACT} (Animal)`);
     }
   }
@@ -51,11 +51,9 @@ export default class Animal {
 
   speak(phrase, toHuman = false) {
     console.log(
-      toHuman ?
-        this.getPhraseForAHuman(phrase) :
-        this.getPhraseForAnotherAnimal(phrase)
+      toHuman
+        ? this.getPhraseForAHuman(phrase)
+        : this.getPhraseForAnotherAnimal(phrase)
     );
   }
-
 }
-
