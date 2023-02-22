@@ -2,14 +2,12 @@
   "name": "rotunda-takehome-fed",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js --mode development",
     "test": "jest",
     "test-watch": "jest --watchAll"
   },
   "keywords": [],
-  "author": "",
+  "author": "OSantos",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.21.0",
